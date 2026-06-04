@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Wahyu Ozorah Manurung</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cursor-glow"></div>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">&lt;Wahyu Ozorah Manurung /&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Prestasi</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="#teaching">Mengajar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="pre-title">Halo, nama saya</p>
+                <h1>Wahyu Ozorah Manurung</h1>
+                <h2 class="sub-title">Artificial Intelligence Enthusiast, Full-Stack Developer & UI/UX Designer</h2>
+                <p class="description">
+                    AI,Full-Stack Developer & UI/UX Design yang berfokus pada Machine Learning, Deep Learning, Computer Vision, dan pengembangan aplikasi web. Memiliki ketertarikan dalam membangun sistem cerdas yang mengintegrasikan teknologi AI dengan solusi web untuk menyelesaikan permasalahan nyata secara efektif dan inovatif dan desian UI/UX.
+                <div class="tech-stack">
+                    <span class="tag">Python</span> <span class="tag">AI Algorithm</span> <span class="tag">Laravel</span> <span class="tag">FastAPI</span> <span class="tag">Html,CSS, Java Script</span> <span class="tag">SQL</span> <span class="tag">Canva and Figma</span>
+                </div>
+                <div class="cta-buttons">
+                    <a href="https://drive.google.com/file/d/1G6M7bm4_ovBw0iLD2tEQrJwNckn437BD/view?usp=sharing" download class="btn btn-primary"><i class="fa-solid fa-download"></i> Unduh CV</a>
+                    <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+                </div>
+            </div>
+            
+            <div class="hero-image-container">
+               <div class="hero-image-container">
+                <div class="profile-frame">
+               
+                <div class="border-glow"></div>
+                <img src="assets/images/wahyu-profile-foto.png" alt="Wahyu Ozorah Manurung" class="profile-img">
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="section-title">My Project</h2>
+        <div class="grid-container">
+            
+            <div class="card project-card">
+                <div class="card-img-wrapper">
+                    <img src="assets/images/Deteksi.png" alt="Stroke Classification" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Stroke Detection Based Tow Stage Model</div>
+                    <h3>Two-Stage Stroke Classification and Detection System</h3>
+                    <p>Sistem klasifikasi stroke otomatis berbasis citra CT Scan menggunakan deteksi objek YOLOv11 dan analisis tekstur Radiomics.</p>
+                    <div class="card-footer">
+                        <a href="details/project-stroke.html" class="btn-detail">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="card-img-wrapper">
+                    <img src="assets/images/SI.png" alt="Preprocessing Web App" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Sistem Informasi</div>
+                    <h3>SILAB-Sistem Informasi Lab Informatika</h3>
+                    <p>Aplikasi web untuk membantu proses pembelajaran di Lab Informatika.</p>
+                    <div class="card-footer">
+                        <a href="details/project-sistem-lab.html" class="btn-detail">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card project-card">
+                <div class="card-img-wrapper">
+                    <img src="assets/images/acne1.png" alt="FastAPI Integration" class="project-img">
+                </div>
+                <div class="card-content">
+                    <div class="card-badge">Deteksi Jerawat</div>
+                    <h3>ACNIVERS</h3>
+                    <p>Implementasi AI dan FastAPI backend untuk serving model Deep Learning YOLOv8 dalam deteksi jerawat.</p>
+                    <div class="card-footer">
+                        <a href="details/project-jerawat.html" class="btn-detail">Lihat Detail <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="view-more-container">
+            <a href="all-projects.html" class="btn btn-outline-large">Lihat Semua Project <i class="fa-solid fa-folder-open"></i></a>
+        </div>
+    </section>
+    <section id="achievements" class="section">
+        <h2 class="section-title">Prestasi & Publikasi</h2>
+        <div class="timeline">
+            
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">Terbaru</div>
+                <div class="timeline-content card clickable-card" onclick="window.location.href='details/prestasi-jurnal.html'">
+                    <h3>Publikasi Jurnal Riset AI JMASIF UNDIP SINTA 3</h3>
+                    <p>Penulis utama dalam manuskrip penelitian deteksi dan klasifikasi stroke menggunakan pendekatan <i>two-stage model</i> yang menggabungkan deep learning dan machine learning dengan ekstasi fitur radiomics. 
+                <a href="https://ejournal.undip.ac.id/index.php/jmasif/article/view/78464" >Baca artikel ></a>
+                    </div>
+            <div class="timeline-content card clickable-card" onclick="window.location.href='details/prestasi-jurnal.html'">
+                    <h3>Sertifikasi Data Science BNSP</h3>
+                    <p>Berhasil mendapatan sertifikasi data science dari Badan Nasional Sertifikasi Profesi (BNSP) dengan mengerjakan project yang berkaiatan dengan data science dan materi dari pengajar </p>
+                <a href="https://www.linkedin.com/in/wahyu-ozorah-3a6a36212/details/certifications/" >Lihat Sertifikasi ></a>
+                    </div>
+             <div class="timeline-content card clickable-card" onclick="window.location.href='details/prestasi-jurnal.html'">
+                    <h3>Juri Rekognisi LDI oleh PUSPRESNAS</h3>
+                    <p>Berhasil mendapatan Juri rekognisi Nasional yang diselenggarakan oleh PUSPRESNAS dengan melalui seleksi portofolio dan subtansi tahun 2026 </p>
+                <a href="https://drive.google.com/file/d/1omdGLkn-ggCXT53gwO6jg5dT3DK1B6Z1/view?usp=drivesdk" >Lihat Sertifikat ></a>
+                    </div>
+
+                 <div class="timeline-content card clickable-card" onclick="window.location.href='details/prestasi-jurnal.html'">
+                    <h3>N1 Debate KDMI 2025 - Purwokerto UNSOED</h3>
+                    <p>Berhasil menjadi juri N1 mewakili UNIVERSITAS BENGKULU dengan mendapatkan posisi 2x chair (ketua juri) dan masuk kedalam 20 besar N1 Terbaik</p>
+                <a href="https://drive.google.com/drive/u/0/search?q=N1" >Lihat Sertifikat ></a>
+                    </div>
+                <div class="timeline-content card clickable-card" onclick="window.location.href='details/prestasi-jurnal.html'">
+                    <h3>Juara 1 Lomba Karya Tulis Ilmiah Tingkat Nasional </h3>
+                    <p>Berhasil mendapatkan juara 1 Lomba Karya Tulis Ilmiah Tingkat Nasional</p>
+                <a href="https://drive.google.com/drive/u/0/search?q=KTI" >Lihat Sertifikat ></a>
+                    </div>
+            </div>
+
+        </div>
+
+        <div class="view-more-container" style="margin-top: 40px;">
+            <a href="https://linkedin.com/in/username-kamu" target="_blank" class="btn btn-outline-large">Lihat Prestasi Lainnya di LinkedIn <i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </section>
+    <section id="teaching" class="section">
+    <h2 class="section-title">Teaching & Mentoring</h2>
+
+    <div class="grid-container">
+
+        <div class="card project-card">
+            <div class="card-content">
+                <div class="card-badge">Teaching Assistant</div>
+                <h3>Asisten Praktikum Pemrograman</h3>
+                <p>
+                    Membimbing mahasiswa dalam pembelajaran dasar pemrograman baik di lingkup Universitas ataupun prodi,
+                    algoritma, struktur data, serta membantu proses praktikum
+                    dan evaluasi tugas. Bahasa yang dipakai saat menagajar (JAVA,PYTHON,C++) dan mengajarkan pembuatan web sederhana menggunakan HTML dan CSS
+                </p>
+            </div>
+        </div>
+
+        <div class="card project-card">
+            <div class="card-content">
+                <div class="card-badge">Basis Data </div>
+                <h3>Asisten Praktikum</h3>
+                <p>
+                    Memberikan pembelajaran dan pendampingan praktikum basis data kepada mahasiswa Informatika, mencakup perancangan database, pemodelan data, serta implementasi SQL. Selain itu, membimbing mahasiswa dalam menyelesaikan tugas besar sebagai luaran akhir praktikum.
+                </p>
+            </div>
+        </div>
+
+        <div class="card project-card">
+            <div class="card-content">
+                <div class="card-badge">Rekayasa Perangkat Lunak</div>
+                <h3>Asisten Praktikum</h3>
+                <p>
+                    Memberikan pembelajaran kepada mahasiswa Informatika terkait analisis dan perancangan perangkat lunak, termasuk penyusunan UML, Use Case Diagram, Activity Diagram, Class Diagram, serta dokumentasi sistem sebagai dasar pengembangan aplikasi.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <section id="contact" class="section">
+        <div class="contact-container card">
+            <h2>Mari Berkolaborasi</h2>
+            <p>Saya selalu terbuka untuk diskusi mengenai riset AI, Computer Vision, atau peluang kerja sama project.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/wahyu-ozorah-3a6a36212/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/wahyuozorahmanurung" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.instagram.com/wahyuozorahmanurung_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:wahyuozorahmanurung@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">© 2026 Wahyu Ozorah Manurung. All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
