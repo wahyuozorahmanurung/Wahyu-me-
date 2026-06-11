@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Project | Stroke Classification</title>
+    <title>Project Detail | Stroke Classification</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -198,7 +198,7 @@ box-shadow: 0 15px 40px rgba(0,0,0,.25);
         <div class="nav-container">
             <a href="../index.html" class="logo">&lt;WOM /&gt;</a>
             <a href="../index.html" class="nav-back">
-                <i class="fa-solid fa-arrow-left"></i> Kembali
+                <i class="fa-solid fa-arrow-left"></i> Back
             </a>
         </div>
     </nav>
@@ -207,7 +207,7 @@ box-shadow: 0 15px 40px rgba(0,0,0,.25);
 
         <a href="../index.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i>
-            Kembali ke Beranda
+            Back to Home
         </a>
 
         <div class="card-badge">
@@ -215,7 +215,7 @@ box-shadow: 0 15px 40px rgba(0,0,0,.25);
         </div>
 
         <h1 class="project-title">
-            ACNEVERSE: Sistem Deteksi Jerawat dan Edukasi Perawatan Kulit Berbasis Artificial Intelligence
+            ACNEVERSE: Artificial Intelligence-Based Acne Detection and Skin Care Education System
         </h1>
 
         <div class="project-highlight">
@@ -231,7 +231,7 @@ box-shadow: 0 15px 40px rgba(0,0,0,.25);
         <div class="project-stats">
             <div class="stat-box">
                 <h3>7</h3>
-                <p>Kelas Jerawat</p>
+                <p>Acne Classes</p>
             </div>
 
             <div class="stat-box">
@@ -247,73 +247,73 @@ box-shadow: 0 15px 40px rgba(0,0,0,.25);
 
         <div class="detail-body">
 
-            <h4>Situation (Latar Belakang & Konteks Proyek)</h4>
+            <h4>Situation (Project Background & Context)</h4>
             <p>
-                Masalah kesehatan kulit wajah, khususnya jerawat, sering kali memicu penurunan rasa percaya diri bagi banyak orang. Sayangnya, keterbatasan akses, biaya konsultasi klinis, serta minimnya pengetahuan dasar membuat masyarakat kerap salah dalam mengidentifikasi jenis jerawat dan memilih penanganan yang tepat. Proyek <strong>ACNEVERSE</strong> ini diinisiasi sebagai proyek capstone dalam program mentereng <strong>DBS Foundation Coding Camp powered by Dicoding</strong> untuk menghadirkan solusi deteksi dini kondisi kulit yang mudah diakses, cepat, serta bernilai edukatif.
+                Facial skin health issues, particularly acne, often lead to a decrease in self-confidence for many individuals. Unfortunately, limited access, high clinical consultation costs, and a lack of basic knowledge frequently cause people to misidentify their type of acne and choose inappropriate treatments. The <strong>ACNEVERSE</strong> project was initiated as a capstone project within the prestigious <strong>DBS Foundation Coding Camp powered by Dicoding</strong> program to provide an accessible, fast, and educational early detection solution for skin conditions.
             </p>
 
             <img src="../assets/images/Acne2.png"
                  alt="Dashboard Acneverse"
                  class="main-detail-img">
 
-            <h4>Task (Tantangan & Tanggung Jawab Tim)</h4>
+            <h4>Task (Challenges & Team Responsibilities)</h4>
             <p>
-                Sebagai tim pengembang, kami bertanggung jawab penuh untuk merancang, melatih, dan mengimplementasikan model kecerdasan buatan yang mampu mengklasifikasikan multi-kelas jerawat secara presisi. Tantangan utamanya adalah melatih model <strong>Computer Vision</strong> agar sensitif mendeteksi berbagai variasi ukuran dan tipe jerawat langsung dari kamera pengguna. Selama proses pengerjaan, tim kami mendapatkan pendampingan intensif dari mentor profesional di bidang Artificial Intelligence, Machine Learning, Computer Vision, dan Software Engineering untuk memastikan standardisasi sistem memenuhi ekspektasi industri.
+                As the development team, we were fully responsible for designing, training, and implementing an artificial intelligence model capable of precisely classifying multi-class acne. The main challenge was to train the <strong>Computer Vision</strong> model to be sensitive enough to detect various sizes and types of acne directly from the user's camera. Throughout the development process, our team received intensive mentoring from professional mentors in the fields of Artificial Intelligence, Machine Learning, Computer Vision, and Software Engineering to ensure the system standardization met industry expectations.
             </p>
 
-            <h4>Action (Implementasi Teknis & Arsitektur Sistem)</h4>
+            <h4>Action (Technical Implementation & System Architecture)</h4>
             <p>
-                Guna mewujudkan platform yang tangguh, responsif, dan fleksibel, kami membangun sistem ini dengan memisahkan fungsi antarmuka dan komputasi cerdas (Decoupled Architecture) lewat langkah strategis berikut:
+                To build a robust, responsive, and flexible platform, we developed this system by separating the user interface from the intelligent computing components (Decoupled Architecture) through the following strategic steps:
             </p>
 
-            <h5>1. Pengembangan Model Computer Vision (Deep Learning)</h5>
+            <h5>1. Computer Vision Model Development (Deep Learning)</h5>
             <p>
-                Kami melatih model <strong>YOLOv8</strong> menggunakan dataset citra wajah yang dikurasi dan dianotasi secara manual. Model ini dioptimalkan khusus agar mampu mengenali serta memisahkan 7 kategori kondisi kulit secara akurat melalui penempatan bounding box dan nilai tingkat kepercayaan (confidence score):
+                We trained the <strong>YOLOv8</strong> model using a curated and manually annotated dataset of facial images. This model was specifically optimized to accurately recognize and separate 7 skin condition categories through the placement of bounding boxes and confidence scores:
             </p>
             <ul>
-                <li>Blackhead (Komedo Hitam) dan Whitehead (Komedo Putih)</li>
-                <li>Papules dan Pustules</li>
-                <li>Nodule</li>
-                <li>Bekas Jerawat dan Pori-Pori</li>
+                <li>Blackheads and Whiteheads</li>
+                <li>Papules and Pustules</li>
+                <li>Nodules</li>
+                <li>Acne Scars and Pores</li>
             </ul>
 
-            <h5>2. Integrasi Full-Stack & Pembuatan API Service</h5>
+            <h5>2. Full-Stack Integration & API Service Creation</h5>
             <ul>
                 <li>
-                    <strong>FastAPI Backend Service:</strong> Berperan sebagai core mesin AI berbasis <strong>Python</strong> dan <strong>OpenCV</strong> yang bertugas menerima muatan gambar, melakukan proses inferensi model YOLOv8 secara real-time, lalu mengembalikan data koordinat serta label prediksi.
+                    <strong>FastAPI Backend Service:</strong> Acts as the core AI engine powered by <strong>Python</strong> and <strong>OpenCV</strong>, responsible for receiving image payloads, performing real-time YOLOv8 model inference, and returning coordinate data along with prediction labels.
                 </li>
                 <li>
-                    <strong>Laravel Frontend Web:</strong> Digunakan untuk merancang antarmuka pengguna, sistem autentikasi, serta logika navigasi program menggunakan bahasa <strong>PHP</strong> dan basis data <strong>MySQL</strong>.
+                    <strong>Laravel Frontend Web:</strong> Utilized to design the user interface, authentication system, and program navigation logic using <strong>PHP</strong> and a <strong>MySQL</strong> database.
                 </li>
                 <li>
-                    <strong>Konektivitas REST API:</strong> Menjembatani komunikasi asinkronus antara gerbang Laravel dan klaster FastAPI agar proses kalkulasi gambar berjalan tanpa hambatan (seamless).
+                    <strong>REST API Connectivity:</strong> Bridges the asynchronous communication between the Laravel gateway and the FastAPI cluster to ensure the image calculation process runs seamlessly.
                 </li>
             </ul>
 
-            <h5>3. Rekayasa Fitur Berorientasi Pengguna</h5>
+            <h5>3. User-Oriented Feature Engineering</h5>
             <p>
-                Kami menyusun alur penggunaan aplikasi yang sederhana dan ramah pengguna (Cross-Platform Mobile & Desktop Browser):
+                We designed a simple and user-friendly workflow for the application (Cross-Platform Mobile & Desktop Browser):
             </p>
             <ul>
-                <li>Pengguna membuka aplikasi ACNEVERSE via browser, lalu memilih opsi input via unggah file galeri atau tangkapan kamera real-time.</li>
-                <li>Gambar dikirim menuju server via REST API untuk dieksekusi oleh YOLOv8.</li>
-                <li>Sistem mengembalikan visualisasi posisi jerawat lengkap dengan detail karakteristik pemicu, edukasi penyebab, serta rekomendasi solusi perawatan kulit yang relevan.</li>
+                <li>Users open the ACNEVERSE application via a browser, then choose the input option via gallery file upload or real-time camera capture.</li>
+                <li>The image is sent to the server via the REST API to be executed by YOLOv8.</li>
+                <li>The system returns a visualization of the acne positions, complete with detailed triggering characteristics, causes education, and relevant skincare solution recommendations.</li>
             </ul>
 
             <img src="../assets/images/Acne3.png"
-                 alt="Deteksi Jerawat"
+                 alt="Acne Detection"
                  class="main-detail-img">
 
-            <h4>Result (Hasil Akhir & Dampak)</h4>
+            <h4>Result (Final Outcome & Impact)</h4>
             <p>
-                Melalui kolaborasi tim yang solid dan bimbingan berkala, proyek ACNEVERSE sukses dirampungkan dan dipresentasikan dengan mulus di hadapan para mentor serta dewan evaluator program DBS Foundation Coding Camp. Sistem ini terbukti mampu mendeteksi letak dan mengklasifikasikan jenis jerawat secara instan dengan tingkat akurasi yang memuaskan. Keberhasilan integrasi teknologi YOLOv8, FastAPI, dan Laravel ini melahirkan produk teknologi kesehatan disruptif yang tidak hanya fungsional sebagai alat pemindaian wajah, tetapi juga sukses menjadi media edukasi interaktif guna meningkatkan kesadaran perawatan kulit masyarakat secara luas.
+                Through solid team collaboration and regular guidance, the ACNEVERSE project was successfully completed and seamlessly presented to the mentors and evaluation board of the DBS Foundation Coding Camp program. The system proved capable of instantly detecting the location and classifying the type of acne with a satisfying level of accuracy. The successful integration of YOLOv8, FastAPI, and Laravel technologies brought forth a disruptive health technology product that is not only functional as a facial scanning tool but also highly successful as an interactive educational medium to increase public awareness of skincare on a broader scale.
             </p>
 
             <img src="../assets/images/Acneverse4.png"
-                 alt="Edukasi Jerawat"
+                 alt="Acne Education"
                  class="main-detail-img">
 
-            <h4>Teknologi yang Digunakan</h4>
+            <h4>Technologies Used</h4>
             <div class="tech-stack">
                 <span class="tag">Python</span>
                 <span class="tag">YOLOv8</span>
