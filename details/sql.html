@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Project | Sistem Basis Data Penggajian</title>
+    <title>Project Detail | Payroll Database System</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -197,7 +197,7 @@
         <div class="nav-container">
             <a href="../index.html" class="logo">&lt;WOM /&gt;</a>
             <a href="../index.html" class="nav-back">
-                <i class="fa-solid fa-arrow-left"></i> Kembali
+                <i class="fa-solid fa-arrow-left"></i> Back
             </a>
         </div>
     </nav>
@@ -206,7 +206,7 @@
 
         <a href="../index.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i>
-            Kembali ke Beranda
+            Back to Home
         </a>
 
         <div class="card-badge">
@@ -214,7 +214,7 @@
         </div>
 
         <h1 class="project-title">
-            Perancangan Relasional Basis Data Sistem Penggajian dan Manajemen Karyawan 
+            Relational Database Design for Payroll and Employee Management System 
         </h1>
 
         <div class="project-highlight">
@@ -223,13 +223,13 @@
         </div>
 
         <img src="../assets/images/SQL.png"
-             alt="Skema Basis Data"
+             alt="Database Schema"
              class="main-detail-img">
 
         <div class="project-stats">
             <div class="stat-box">
-                <h3>9 Tabel</h3>
-                <p>Relasional Inti</p>
+                <h3>9 Tables</h3>
+                <p>Core Relational</p>
             </div>
 
             <div class="stat-box">
@@ -245,53 +245,53 @@
 
         <div class="detail-body">
 
-            <h4>Situation (Latar Belakang)</h4>
+            <h4>Situation (Background)</h4>
             <p>
-                Sistem penggajian karyawan pada lingkungan perusahaan skala menengah ke atas menuntut tingkat presisi tinggi, integritas data yang ketat, dan keamanan data finansial yang optimal. Proses rekapitulasi manual untuk komponen gaji pokok, bonus, kalkulasi jam lembur, tunjangan, hingga akumulasi potongan wajib sering kali memperlambat operasional departemen finansial dan berisiko memunculkan inkonsistensi data keuangan. Guna mengatasi masalah tersebut, proyek ini ditujukan untuk membangun fondasi arsitektur basis data relasional bernama <strong>perusahaan</strong> menggunakan <strong>MySQL</strong> yang mampu mengotomatisasi seluruh alur bisnis penggajian secara tersinkronisasi.
+                Employee payroll systems within medium to large-scale corporate environments demand a high degree of precision, strict data integrity, and optimal financial data security. Manual recapitulation processes for basic salary components, bonuses, overtime calculations, allowances, up to the accumulation of mandatory deductions often slow down financial department operations and pose risks of financial data inconsistency. To address these challenges, this project aims to build a relational database architecture foundation named <strong>perusahaan</strong> using <strong>MySQL</strong> that is capable of automating the entire payroll business workflow in a synchronized manner.
             </p>
 
 
-            <h4>Task (Tantangan & Tanggung Jawab)</h4>
+            <h4>Task (Challenges & Responsibilities)</h4>
             <p>
-                Tanggung jawab utama saya dalam proyek ini adalah mendesain skema relasi antar-tabel yang optimal serta menerapkan normalisasi data untuk menghindari anomali manipulasi. Tantangan teknis terbesarnya adalah mengintegrasikan beberapa komponen finansial yang dinamis (seperti tabel lembur, tunjangan, dan potongan) ke dalam satu tabel kompilasi akhir (gaji) dengan aturan dependensi yang ketat. Selain itu, saya dituntut untuk memindahkan beban logika bisnis pembaruan data dari sisi aplikasi (<em>application level</em>) langsung ke dalam server basis data menggunakan <strong>Stored Procedure</strong> dan <strong>Database Trigger</strong> demi efisiensi query dan keamanan transaksi data.
+                My primary responsibility in this project was to design an optimal relational table schema and implement data normalization to prevent manipulation anomalies. The greatest technical challenge was integrating multiple dynamic financial components (such as overtime, allowances, and deductions tables) into a single final compilation table (gaji) with strict dependency rules. Furthermore, I was required to shift the burden of data update business logic from the application layer (<em>application level</em>) directly into the database server using <strong>Stored Procedures</strong> and <strong>Database Triggers</strong> to ensure query efficiency and data transaction security.
             </p>
 
-            <h4>Action (Implementasi Teknis & Struktur Query)</h4>
+            <h4>Action (Technical Implementation & Query Structure)</h4>
             <p>
-                Desain arsitektur basis data ini diwujudkan dengan memanfaatkan fitur operasional tingkat lanjut dari MySQL Enterprise. Langkah taktis yang diimplementasikan mencakup:
+                The design of this database architecture was realized by leverage advanced operational features of MySQL Enterprise. The tactical steps implemented include:
             </p>
 
-            <h5>1. Desain Skema Relasional Komprehensif</h5>
+            <h5>1. Comprehensive Relational Schema Design</h5>
             <p>
-                Membangun struktur basis data relasional yang terdiri dari 9 entitas operasional yang saling terhubung menggunakan konstrain <em>Foreign Key</em> dengan aturan <em>ON DELETE CASCADE</em> dan <em>ON UPDATE CASCADE</em> untuk menjamin integritas referensial:
-            </p>
-            <ul>
-                <li><strong>Entitas Profil:</strong> Tabel <code>Karyawan</code> sebagai pusat entitas, didukung oleh tabel <code>Jabatan</code> dan <code>Departemen</code> untuk mengelompokkan struktur organisasi.</li>
-                <li><strong>Entitas Operasional & Absensi:</strong> Tabel <code>Absensi</code> untuk melacak kehadiran serta tabel <code>Lembur</code> untuk mengalkulasi jam kerja tambahan karyawan.</li>
-                <li><strong>Entitas Komponen Finansial:</strong> Tabel <code>Tunjangan</code>, <code>TunjanganKaryawan</code>, dan <code>PotonganGaji</code> untuk menyimpan variabel penambah dan pengurang upah.</li>
-                <li><strong>Entitas Rekapitulasi Akhir:</strong> Tabel <code>Gaji</code> yang mengompilasi total upah bersih beserta tanggal pembayarannya secara berkala.</li>
-            </ul>
-
-            <h5>2. Otomatisasi Logika Bisnis Lewat Stored Procedure</h5>
-            <p>
-                Untuk menyederhanakan interaksi aplikasi dengan basis data dan menjaga modularitas kode, saya merancang beberapa prosedur tersimpan (Stored Procedures) tingkat lanjut dengan parameter inputan dinamis:
+                Building a relational database structure consisting of 9 interconnected operational entities using <em>Foreign Key</em> constraints with <em>ON DELETE CASCADE</em> and <em>ON UPDATE CASCADE</em> rules to guarantee referential integrity:
             </p>
             <ul>
-                <li><strong>Prosedur Tambah Data Kolektif (<code>InsertDataLengkap</code>):</strong> Mengotomatisasi penambahan data baru di multi-tabel secara sekuensial hanya dalam satu kali eksekusi perintah (Karyawan, Lembur, Potongan, Tunjangan, dan Gaji awal).</li>
-                <li><strong>Prosedur Pembaruan Terpusat (<code>UpdateDataLengkap</code>):</strong> Menyediakan satu gerbang aman untuk memperbarui seluruh parameter finansial karyawan secara bersamaan di tabel-tabel relasional terkait, menjamin efisiensi baris kode program backend.</li>
+                <li><strong>Profile Entities:</strong> The <code>Karyawan</code> table as the central entity, supported by the <code>Jabatan</code> and <code>Departemen</code> tables to structure the organizational hierarchy.</li>
+                <li><strong>Operational & Attendance Entities:</strong> The <code>Absensi</code> table to track attendance and the <code>Lembur</code> table to calculate employee overtime hours.</li>
+                <li><strong>Financial Component Entities:</strong> The <code>Tunjangan</code>, <code>TunjanganKaryawan</code>, and <code>PotonganGaji</code> tables to store salary addition and deduction variables.</li>
+                <li><strong>Final Recapitulation Entity:</strong> The <code>Gaji</code> table which compiles the total net pay along with its regular payment dates.</li>
             </ul>
 
-            <h5>3. Pengamanan Transaksi via Konfigurasi Dump SQL</h5>
+            <h5>2. Business Logic Automation via Stored Procedures</h5>
             <p>
-                Menyusun konfigurasi skrip SQL dump yang aman dengan menonaktifkan pemeriksaan indeks (<em>INDEX_KEYS=0</em>) dan relasi foreign key (<em>FOREIGN_KEY_CHECKS=0</em>) selama proses migrasi data berlangsung untuk mempercepat proses impor data, lalu mengaktifkannya kembali secara otomatis guna menjaga validitas ACID (<em>Atomicity, Consistency, Isolation, Durability</em>).
+                To simplify application interaction with the database and maintain code modularity, I designed several advanced stored procedures with dynamic input parameters:
+            </p>
+            <ul>
+                <li><strong>Collective Data Insertion Procedure (<code>InsertDataLengkap</code>):</strong> Automates adding new data sequentially across multiple tables in a single command execution (Karyawan, Lembur, Potongan, Tunjangan, and initial Gaji).</li>
+                <li><strong>Centralized Update Procedure (<code>UpdateDataLengkap</code>):</strong> Provides a single secure gateway to update all employee financial parameters simultaneously across related relational tables, ensuring backend program code efficiency.</li>
+            </ul>
+
+            <h5>3. Securing Transactions via SQL Dump Configuration</h5>
+            <p>
+                Structuring a secure SQL dump script configuration by disabling index keys verification (<em>INDEX_KEYS=0</em>) and foreign key constraints (<em>FOREIGN_KEY_CHECKS=0</em>) during the data migration process to accelerate data importing, and then automatically re-enabling them to maintain ACID (<em>Atomicity, Consistency, Isolation, Durability</em>) validity.
             </p>
 
-            <h4>Result (Hasil Akhir & Dampak)</h4>
+            <h4>Result (Final Outcome & Impact)</h4>
             <p>
-                Melalui rancangan basis data relasional yang terstruktur ini, sistem pengelolaan penggajian korporat berhasil berjalan dengan stabilitas performa yang tinggi. Penggunaan Stored Procedure terbukti mengeliminasi latensi query berulang dari sisi backend web dan menyatukan validasi manipulasi data langsung di dalam server database. Struktur data yang telah ternormalisasi ini sukses mencegah terjadinya duplikasi data, meningkatkan kecepatan pemrosesan laporan penggajian bulanan, serta meminimalkan risiko kesalahan kalkulasi finansial karyawan secara signifikan.
+                Through this structured relational database design, the corporate payroll management system successfully operates with high performance stability. The utilization of Stored Procedures has proven to eliminate repetitive query latency from the web backend side and unifies data manipulation validation directly inside the database server. This normalized data structure successfully prevents data duplication, accelerates monthly payroll report processing speeds, and significantly minimizes the risk of employee financial calculation errors.
             </p>
 
-            <h4>Teknologi & Tools yang Digunakan</h4>
+            <h4>Technologies & Tools Used</h4>
             <div class="tech-stack">
                 <span class="tag">MySQL</span>
                 <span class="tag">SQL Relational Architecture</span>
