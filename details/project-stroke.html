@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -176,7 +176,7 @@
 .card-badge{
     display: inline-block;
     background: rgba(100,255,218,.08);
-    border: 1px solid rgba(100,255,218,.15);
+    border: 1px solid rgba(100,255,218,0.15);
     color: var(--accent-color);
     padding: 8px 14px;
     border-radius: 50px;
@@ -191,7 +191,7 @@
         <div class="nav-container">
             <a href="../index.html" class="logo">&lt;WOM /&gt;</a>
             <a href="../index.html" class="nav-back">
-                <i class="fa-solid fa-arrow-left"></i> Kembali
+                <i class="fa-solid fa-arrow-left"></i> Back
             </a>
         </div>
     </nav>
@@ -200,7 +200,7 @@
 
         <a href="../index.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i>
-            Kembali ke Beranda
+            Back to Home
         </a>
 
         <div class="card-badge">
@@ -208,7 +208,7 @@
         </div>
 
         <h1 class="project-title">
-            Two-Stage Stroke Classification System Berbasis Citra CT Scan
+            Two-Stage Stroke Classification System Based on CT Scan Imagery
         </h1>
 
         <div class="project-highlight">
@@ -224,7 +224,7 @@
         <div class="project-stats">
             <div class="stat-box">
                 <h3>3</h3>
-                <p>Kelas Stroke</p>
+                <p>Stroke Classes</p>
             </div>
 
             <div class="stat-box">
@@ -245,41 +245,41 @@
         
         <div class="detail-body">
 
-            <h4>Situation (Latar Belakang)</h4>
+            <h4>Situation (Background)</h4>
             <p>
-                Identifikasi dini penyakit stroke merupakan faktor krusial dalam dunia medis guna meminimalkan risiko mortalitas dan kecacatan permanen pasien. Namun, proses pembacaan citra <strong>CT Scan kepala</strong> secara manual memerlukan waktu, ketelitian tinggi, dan sangat bergantung pada ketersediaan dokter spesialis radiologi. Menjawab tantangan tersebut, proyek riset ini diinisiasi untuk membangun sistem kecerdasan buatan berbasis <strong>Medical Image Analysis</strong> yang mampu mendeteksi serta mengklasifikasikan kondisi <strong>Stroke Iskemik</strong>, <strong>Stroke Hemoragik</strong>, dan <strong>Normal</strong> secara otomatis, cepat, dan objektif.
+                Early identification of stroke is a crucial factor in the medical world to minimize the risk of patient mortality and permanent disability. However, the process of reading <strong>head CT Scan</strong> images manually requires time, high precision, and is heavily dependent on the availability of radiologists. In response to these challenges, this research project was initiated to build an artificial intelligence system based on <strong>Medical Image Analysis</strong> that can automatically, quickly, and objectively detect and classify <strong>Ischemic Stroke</strong>, <strong>Hemorrhagic Stroke</strong>, and <strong>Normal</strong> conditions.
             </p>
 
             <img src="../assets/images/Deteksi1.png"
-                 alt="Deteksi Stroke"
+                 alt="Stroke Detection"
                  class="main-detail-img">
 
-            <h4>Task (Tantangan Riset & Target Sistem)</h4>
+            <h4>Task (Research Challenges & System Target)</h4>
             <p>
-                Tantangan utama dalam proyek ini adalah mengatasi kompleksitas visual citra medis, di mana lesi stroke sering kali memiliki batas yang samar dan ukuran yang bervariasi. Target utama saya adalah merancang arsitektur sistem klasifikasi terintegrasi yang tidak hanya memiliki akurasi tinggi, tetapi juga *interpretable* (dapat dipahami alur keputusannya secara medis). Selain itu, sistem harus mampu mengakomodasi berbagai format input data medis mulai dari data mentah klinis (<strong>DICOM</strong>) hingga format citra standar (<strong>PNG/JPG</strong>) untuk diolah menjadi prediksi klasifikasi yang siap mendukung keputusan klinis (<em>Decision Support System</em>).
+                The primary challenge in this project is overcoming the visual complexity of medical imagery, where stroke lesions often have poorly defined boundaries and varying sizes. My main target is to design an integrated classification system architecture that is not only highly accurate but also interpretable (its decision-making process can be understood from a medical standpoint). Additionally, the system must accommodate various medical input data formats ranging from raw clinical data (<strong>DICOM</strong>) to standard image formats (<strong>PNG/JPG</strong>) to be processed into classification predictions ready to support clinical decisions (<em>Decision Support System</em>).
             </p>
 
-            <h4>Action (Metodologi & Implementasi Teknis)</h4>
+            <h4>Action (Methodology & Technical Implementation)</h4>
             <p>
-                Untuk menyelesaikan tantangan tersebut, saya merancang dan mengimplementasikan pendekatan <strong>Two-Stage Classification System</strong> menggunakan kombinasi teknologi <em>Deep Learning</em> dan komputasi fitur canggih. Langkah-langkah strategis yang dilakukan meliputi:
+                To address these challenges, I designed and implemented a <strong>Two-Stage Classification System</strong> approach using a combination of deep learning technologies and advanced feature computing. The strategic steps taken include:
             </p>
 
             <ul>
                 <li>
-                    <strong>Stage 1 - Lokalisasi Berbasis Deep Learning (YOLOv11):</strong> 
-                    Menerapkan model object detection mutakhir <strong>YOLOv11</strong> untuk secara cerdas mendeteksi, mengisolasi, dan mengekstrak area area yang relevan atau <em>Region of Interest (ROI)</em> yang terindikasi mengalami lesi stroke pada citra CT Scan.
+                    <strong>Stage 1 - Deep Learning-Based Localization (YOLOv11):</strong> 
+                    Applying the cutting-edge object detection model <strong>YOLOv11</strong> to intelligently detect, isolate, and extract relevant areas or <em>Regions of Interest (ROI)</em> indicated to have stroke lesions on CT Scan images.
                 </li>
                 <li>
-                    <strong>Stage 2 - Ekstraksi Fitur Tekstur (Radiomics):</strong> 
-                    Area ROI yang berhasil diisolasi kemudian diproses menggunakan pustaka <strong>PyRadiomics</strong>. Tahap ini mengekstrak ratusan fitur tekstur tingkat tinggi yang tidak kasat mata secara manual, seperti karakteristik intensitas, bentuk, dan matriks tekstur (GLCM, GLSZM).
+                    <strong>Stage 2 - Texture Feature Extraction (Radiomics):</strong> 
+                    The successfully isolated ROI areas are then processed using the <strong>PyRadiomics</strong> library. This stage manually extracts hundreds of high-level, non-visible texture features, such as intensity characteristics, shape, and texture matrices (GLCM, GLSZM).
                 </li>
                 <li>
-                    <strong>Klasifikasi (Machine Learning):</strong> 
-                    Fitur-fitur kuantitatif tersebut kemudian diumpankan ke dalam jajaran algoritma Machine Learning yang kokoh, seperti <strong>SVM</strong>, <strong>Naive Bayes</strong>, dan <strong>Random Forest</strong> menggunakan <strong>Scikit-Learn</strong> yang mana dilatih dan dianlisis komparatif mencari algoritma terbaik untuk menentukan hasil akhir klasifikasi 3 kelas.
+                    <strong>Classification (Machine Learning):</strong> 
+                    These quantitative features are then fed into a robust lineup of Machine Learning algorithms, such as <strong>SVM</strong>, <strong>Naive Bayes</strong>, and <strong>Random Forest</strong> using <strong>Scikit-Learn</strong>, which are trained and comparatively analyzed to find the best algorithm for determining the final 3-class classification outcome.
                 </li>
                 <li>
-                    <strong>Integrasi Sistem & Pembuatan API:</strong> 
-                    Menyelaraskan seluruh pipeline kecerdasan buatan ke dalam lingkungan produksi menggunakan <strong>Python</strong> dan <strong>FastAPI</strong>, yang kemudian diintegrasikan dengan antarmuka web responsif berbasis <strong>Laravel</strong> agar hasil analisis visual dapat diakses secara intuitif oleh tenaga medis.
+                    <strong>System Integration & API Development:</strong> 
+                    Aligning the entire artificial intelligence pipeline into a production environment using <strong>Python</strong> and <strong>FastAPI</strong>, which is then integrated with a responsive web interface based on <strong>Laravel</strong> so that visual analysis results can be intuitively accessed by medical professionals.
                 </li>
             </ul>
 
@@ -287,12 +287,12 @@
                  alt="Stroke Classification Architecture"
                  class="main-detail-img">
 
-            <h4>Result (Hasil Akhir & Dampak)</h4>
+            <h4>Result (Final Outcome & Impact)</h4>
             <p>
-                Penerapan arsitektur dua tahap (Two-Stage) ini berhasil mengoptimalkan kinerja sistem secara signifikan jika dibandingkan dengan model klasifikasi langsung (single-stage). Kombinasi YOLOv11 dan analisis Radiomics mampu meminimalkan false-positive dan memberikan landasan kuantitatif yang transparan bagi dokter dalam menganalisis jenis stroke. Sistem ini sukses merepresentasikan sebuah inovasi teknologi kesehatan yang mampu memotong waktu tunggu diagnosis, memberikan visualisasi area lesi secara presisi, serta berpotensi besar menjadi asisten digital andalan bagi radiolog dalam alur kerja klinis nyata.
+                The implementation of this Two-Stage architecture successfully optimized system performance significantly compared to single-stage classification models. The combination of YOLOv11 and Radiomics analysis is capable of minimizing false-positives and providing a transparent quantitative foundation for physicians in analyzing stroke types. This system successfully represents a breakthrough in health technology that is capable of cutting diagnosis waiting times, providing precise visualization of lesion areas, and holds great potential to become a reliable digital assistant for radiologists in real clinical workflows.
             </p>
 
-            <h4>Teknologi yang Digunakan</h4>
+            <h4>Technologies Used</h4>
             <div class="tech-stack">
                 <span class="tag">Python</span>
                 <span class="tag">YOLOv11</span>
