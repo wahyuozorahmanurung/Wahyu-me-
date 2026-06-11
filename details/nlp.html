@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Project | Analisis Sentimen ChatGPT</title>
+    <title>Project Details | ChatGPT Sentiment Analysis</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -197,7 +197,7 @@
         <div class="nav-container">
             <a href="../index.html" class="logo">&lt;WOM /&gt;</a>
             <a href="../index.html" class="nav-back">
-                <i class="fa-solid fa-arrow-left"></i> Kembali
+                <i class="fa-solid fa-arrow-left"></i> Back
             </a>
         </div>
     </nav>
@@ -206,7 +206,7 @@
 
         <a href="../index.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i>
-            Kembali ke Beranda
+            Back to Home
         </a>
 
         <div class="card-badge">
@@ -214,7 +214,7 @@
         </div>
 
         <h1 class="project-title">
-            Analisis Sentiment CHAT-GPT
+            ChatGPT Sentiment Analysis
         </h1>
 
         <div class="project-highlight">
@@ -224,93 +224,103 @@
         </div>
 
         <img src="../assets/images/nlp1.png"
-             alt="Analisis Sentimen ChatGPT"
+             alt="ChatGPT Sentiment Analysis"
              class="main-detail-img">
 
         <div class="project-stats">
             <div class="stat-box">
-                <h3>30.000</h3>
-                <p>Data Ulasan</p>
+                <h3>30,000</h3>
+                <p>Reviews</p>
             </div>
 
             <div class="stat-box">
                 <h3>3</h3>
-                <p>Kelas Sentimen</p>
+                <p>Sentiment Classes</p>
             </div>
 
             <div class="stat-box">
-                <h3>97,10%</h3>
-                <p>Akurasi Tertinggi</p>
+                <h3>97.10%</h3>
+                <p>Highest Accuracy</p>
             </div>
 
             <div class="stat-box">
-                <h3>3 Model</h3>
+                <h3>3 Models</h3>
                 <p>LSTM vs GRU vs CNN</p>
             </div>
         </div>
 
         <div class="detail-body">
 
-            <h4>Situation (Latar Belakang)</h4>
-        <p>
-            Seiring meningkatnya penggunaan aplikasi ChatGPT, jumlah ulasan pengguna yang tersedia pada Google Play Store juga terus bertambah setiap harinya. Ulasan tersebut mengandung berbagai opini, pengalaman, kritik, saran, hingga tingkat kepuasan pengguna yang dituliskan dalam bentuk teks tidak terstruktur. Mengolah ribuan ulasan secara manual tentu membutuhkan waktu dan sumber daya yang besar, sehingga diperlukan pendekatan otomatis untuk memahami pola dan sentimen yang terkandung di dalamnya. Proyek ini dikembangkan dengan memanfaatkan teknik <strong>Natural Language Processing (NLP)</strong> untuk melakukan analisis sentimen terhadap data ulasan pengguna ChatGPT yang diperoleh melalui proses web scraping. NLP memungkinkan komputer untuk memahami, memproses, dan menganalisis bahasa manusia sehingga informasi penting yang tersembunyi di dalam teks dapat diekstraksi secara efektif. Melalui serangkaian tahapan seperti <em>text preprocessing</em>, pembersihan data, transformasi teks, ekstraksi fitur, hingga proses klasifikasi, sistem mampu mengelompokkan ulasan pengguna ke dalam tiga kategori sentimen, yaitu <strong>positif</strong>, <strong>netral</strong>, dan <strong>negatif</strong>. Hasil analisis ini dapat digunakan untuk memahami persepsi pengguna, mengidentifikasi kelebihan dan kekurangan aplikasi, serta menjadi dasar dalam pengambilan keputusan berbasis data.
-        </p>
-
-            <img src="../assets/images/nlp2.png"
-                 alt="WordCloud Ulasan"
-                 class="main-detail-img">
-
-            <h4>Task (Tantangan Riset & Pemodelan)</h4>
+            <h4>Situation (Background)</h4>
             <p>
-                Tantangan utama dalam riset ini adalah menangani karakteristik data ulasan media sosial Indonesia yang kotor, menggunakan kata gaul (<em>slangwords</em>), tidak baku, serta memiliki variasi teks yang sangat beragam. Tanggung jawab saya meliputi pembangunan seluruh alur pipa pemrosesan data (<em>data preprocessing pipeline</em>) teks bahasa Indonesia yang kokoh, melakukan ekstraksi sentimen berbasis kamus (<em>lexicon-based</em>), serta merancang dan melatih tiga arsitektur Deep Learning yang berbeda, yakni <strong>LSTM (Long Short-Term Memory)</strong>, <strong>GRU (Gated Recurrent Unit)</strong>, dan <strong>CNN (Convolutional Neural Network)</strong> untuk dibandingkan kinerjanya dalam memprediksi data baru secara akurat.
+                As the use of ChatGPT continues to grow, the number of user reviews available on the Google Play Store increases every day. These reviews contain various opinions, experiences, criticisms, suggestions, and levels of user satisfaction expressed in unstructured text. Manually processing thousands of reviews requires significant time and resources, making an automated approach necessary to understand the patterns and sentiments contained within them. This project was developed using <strong>Natural Language Processing (NLP)</strong> techniques to perform sentiment analysis on ChatGPT user reviews collected through web scraping. NLP enables computers to understand, process, and analyze human language so that valuable information hidden within textual data can be extracted effectively. Through a series of stages including <em>text preprocessing</em>, data cleaning, text transformation, feature extraction, and classification, the system is able to categorize user reviews into three sentiment classes: <strong>positive</strong>, <strong>neutral</strong>, and <strong>negative</strong>. The results can be used to understand user perceptions, identify application strengths and weaknesses, and support data-driven decision making.
             </p>
 
-            <h4>Action (Langkah Kerja Teknis & Implementasi)</h4>
+            <img src="../assets/images/nlp2.png"
+                 alt="Review Word Cloud"
+                 class="main-detail-img">
+
+            <h4>Task (Research & Modeling Challenges)</h4>
             <p>
-                Eksperimen diimplementasikan secara komprehensif menggunakan ekosistem <strong>Python</strong> dan library utama pemrosesan bahasa alami (NLP) serta Deep Learning. Langkah-langkah strategis yang dijalankan meliputi:
+                The primary challenge of this research was handling noisy Indonesian social media review data containing slang words, informal expressions, and highly diverse writing styles. My responsibilities included developing a robust Indonesian text <em>data preprocessing pipeline</em>, conducting <em>lexicon-based</em> sentiment extraction, and designing as well as training three different Deep Learning architectures—<strong>LSTM (Long Short-Term Memory)</strong>, <strong>GRU (Gated Recurrent Unit)</strong>, and <strong>CNN (Convolutional Neural Network)</strong>—to compare their performance in accurately predicting sentiment on unseen data.
+            </p>
+
+            <h4>Action (Technical Implementation & Methodology)</h4>
+            <p>
+                The experiments were comprehensively implemented using the <strong>Python</strong> ecosystem and major NLP and Deep Learning libraries. The key implementation stages included:
             </p>
 
             <h5>1. Data Cleaning & Text Preprocessing Pipeline</h5>
             <ul>
-                <li><strong>Penanganan Missing Value:</strong> Mengisi nilai kosong pada metadata versi aplikasi dengan nilai modus dan menandai ulasan tanpa balasan secara sistematis menggunakan <strong>Pandas</strong>.</li>
-                <li><strong>Standardisasi Teks:</strong> Membangun fungsi kustom untuk melakukan <em>case folding</em>, konversi kata gaul menggunakan kamus <em>slangwords</em>, tokenisasi kata, hingga penghapusan kata tidak bermakna (<em>stopword removal</em>).</li>
-                <li><strong>Stemming Bahasa Indonesia:</strong> Mengintegrasikan library <strong>Sastrawi</strong> untuk mereduksi kata berimbuhan menjadi kata dasar guna menyamakan basis semantik kata.</li>
-                <li><strong>Tokenisasi & Padding:</strong> Memanfaatkan pustaka <strong>TensorFlow</strong> untuk melakukan tokenisasi sekuensial dengan batas 2.500 fitur kata tertinggi serta menerapkan <em>padding sequences</em> untuk menyamakan dimensi input sekuensial model.</li>
+                <li><strong>Missing Value Handling:</strong> Filled missing values in application version metadata using the mode and systematically marked reviews without developer responses using <strong>Pandas</strong>.</li>
+
+                <li><strong>Text Standardization:</strong> Developed custom functions for <em>case folding</em>, slang word normalization using a slang dictionary, tokenization, and <em>stopword removal</em>.</li>
+
+                <li><strong>Indonesian Language Stemming:</strong> Integrated the <strong>Sastrawi</strong> library to reduce inflected words into their root forms and standardize semantic representations.</li>
+
+                <li><strong>Tokenization & Padding:</strong> Utilized <strong>TensorFlow</strong> to perform sequential tokenization with a vocabulary limit of 2,500 most frequent words and applied <em>padding sequences</em> to standardize model input dimensions.</li>
             </ul>
 
-            <h5>2. Labelling Polaritas Sentimen (Lexicon-Based)</h5>
+            <h5>2. Sentiment Polarity Labeling (Lexicon-Based)</h5>
             <p>
-                Menghubungkan sistem dengan dataset kamus sentimen Indonesia dari GitHub menggunakan library <strong>Requests</strong> untuk memuat kamus kata positif dan negatif secara asinkronus, kemudian melakukan kalkulasi skor polaritas akhir untuk menetapkan label dasar sebelum pemodelan dilakukan.
+                The system was connected to an Indonesian sentiment lexicon dataset hosted on GitHub using the <strong>Requests</strong> library to asynchronously load positive and negative word dictionaries. Polarity scores were then calculated to generate sentiment labels before the modeling stage.
             </p>
 
-            <h5>3. Arsitektur Pemodelan Deep Learning</h5>
+            <h5>3. Deep Learning Modeling Architectures</h5>
             <p>
-                Membangun dan melatih tiga variasi model menggunakan <strong>Keras / TensorFlow Sequential API</strong> dengan skema arsitektur berikut:
+                Three model variations were developed and trained using the <strong>Keras / TensorFlow Sequential API</strong> with the following architectures:
             </p>
+
             <ul>
-                <li><strong>Model LSTM:</strong> Mengintegrasikan lapisan Embedding, SpatialDropout1D, lapisan inti LSTM untuk menangkap dependensi jangka panjang, serta lapisan Dense dengan aktivasi Softmax untuk klasifikasi multi-kelas.</li>
-                <li><strong>Model GRU:</strong> Menyusun lapisan Bidirectional GRU yang dioptimalkan dengan metode penahanan dini (<em>early stopping</em>) pada epoch ke-27 guna mencegah terjadinya <em>overfitting</em> ketika kinerja model mencapai titik jenuh.</li>
-                <li><strong>Model CNN (Conv1D):</strong> Merancang lapisan konvolusi satu dimensi (Conv1D) yang dipadukan dengan MaxPooling1D dan Flatten untuk mengekstrak fitur spasial lokal dari sekuens teks.</li>
+                <li><strong>LSTM Model:</strong> Implemented Embedding, SpatialDropout1D, and LSTM layers to capture long-term dependencies, followed by a Dense Softmax layer for multiclass classification.</li>
+
+                <li><strong>GRU Model:</strong> Developed a Bidirectional GRU architecture optimized with <em>early stopping</em>, which terminated training at epoch 27 to prevent <em>overfitting</em> after performance saturation.</li>
+
+                <li><strong>CNN (Conv1D) Model:</strong> Designed a one-dimensional convolutional architecture combined with MaxPooling1D and Flatten layers to extract local spatial features from text sequences.</li>
             </ul>
 
             <img src="../assets/images/nlp3.png"
-                 alt="Evaluasi Akurasi Model"
+                 alt="Model Accuracy Evaluation"
                  class="main-detail-img">
 
-            <h4>Result (Hasil Evaluasi & Kesimpulan)</h4>
+            <h4>Result (Evaluation Results & Conclusions)</h4>
             <p>
-                Proyek riset capstone ini sukses diselesaikan dengan hasil evaluasi performa model yang diuji pada data validasi (<em>data test</em>) yang menunjukkan perbedaan signifikansi yang jelas antara ketiga arsitektur:
-            </p>
-            <ul>
-                <li><strong>Model GRU:</strong> Menunjukkan performa konvergensi pelatihan terbaik dengan mencatatkan akurasi pelatihan sebesar <strong>97,10%</strong> dan akurasi pengujian sebesar <strong>89,60%</strong> melalui regulasi <em>early stopping</em> di epoch 27.</li>
-                <li><strong>Model LSTM:</strong> Menunjukkan performa generalisasi yang sangat seimbang dengan akurasi pelatihan mencapai <strong>95,43%</strong> serta mencatatkan akurasi pengujian tertinggi sebesar <strong>89,63%</strong>.</li>
-                <li><strong>Model CNN:</strong> Mencatatkan hasil yang kurang optimal untuk data sekuensial teks dengan akurasi pelatihan sebesar <strong>89,51%</strong> dan akurasi pengujian yang tertahan di angka <strong>78,00%</strong>.</li>
-            </ul>
-            <p>
-                Secara keseluruhan, model berbasis arsitektur sekuensial rekuren (LSTM dan GRU) terbukti jauh lebih unggul dalam memahami konteks semantik ulasan pengguna dibandingkan arsitektur CNN spasial. Model yang telah dilatih sukses mendemonstrasikan kapabilitas prediksi yang presisi saat diuji menggunakan sampel ulasan baru, menjadikannya sebuah purwarupa sistem NLP yang siap diintegrasikan untuk kebutuhan pemantauan reputasi produk digital secara langsung.
+                This capstone research project was successfully completed, and evaluation on the test dataset revealed significant performance differences among the three architectures:
             </p>
 
-            <h4>Teknologi & Tools yang Digunakan</h4>
+            <ul>
+                <li><strong>GRU Model:</strong> Achieved the best training convergence with <strong>97.10%</strong> training accuracy and <strong>89.60%</strong> testing accuracy, supported by <em>early stopping</em> at epoch 27.</li>
+
+                <li><strong>LSTM Model:</strong> Demonstrated highly balanced generalization performance with <strong>95.43%</strong> training accuracy and the highest testing accuracy of <strong>89.63%</strong>.</li>
+
+                <li><strong>CNN Model:</strong> Produced less optimal results for sequential text data, achieving <strong>89.51%</strong> training accuracy and <strong>78.00%</strong> testing accuracy.</li>
+            </ul>
+
+            <p>
+                Overall, recurrent sequential architectures (LSTM and GRU) proved significantly more effective at understanding the semantic context of user reviews compared to the spatial CNN architecture. The trained models successfully demonstrated precise prediction capabilities on unseen review samples, making the solution a practical NLP prototype ready to be integrated into real-time digital product reputation monitoring systems.
+            </p>
+
+            <h4>Technologies & Tools Used</h4>
             <div class="tech-stack">
                 <span class="tag">Python</span>
                 <span class="tag">TensorFlow / Keras</span>
@@ -324,7 +334,6 @@
             </div>
 
         </div>
-
     </div>
 
 </body>
