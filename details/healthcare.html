@@ -89,6 +89,14 @@
           A healthcare organization needed a simple yet effective analytical dashboard to monitor employee mental health indicators and workforce satisfaction. Although employee data was available, management lacked a centralized view to identify burnout trends, stress levels, and potential employee turnover.
         </p>
 
+        <h4>Business Questions</h4>
+        <ul>
+          <li>What is the overall state of employee mental health across the healthcare workforce?</li>
+          <li>Which workplace factors are most dominant in contributing to employee stress?</li>
+          <li>How does job satisfaction differ across departments and employee types?</li>
+          <li>Does access to an Employee Assistance Program (EAP) actually reduce turnover intention?</li>
+        </ul>
+
         <h4>Task</h4>
         <p>
           Build an interactive dashboard that enables HR managers to:
@@ -110,6 +118,7 @@
           <li>Created Pivot Charts to visualize workforce trends.</li>
           <li>Implemented Slicers for dynamic filtering by Department, Employee Type, and Workplace Factors.</li>
           <li>Designed KPI cards highlighting Total Employees, Average Job Satisfaction, Average Stress Level, Employee Assistance Program (EAP) Access, and Turnover Intention.</li>
+          <li>Cross-tabulated turnover intention against EAP access to test whether program availability actually correlates with retention.</li>
           <li>Structured the dashboard to provide a user-friendly and executive-level overview for HR decision making.</li>
         </ul>
 
@@ -119,9 +128,17 @@
         </p>
 
         <h4>Business Insights</h4>
-        
+
         <div class="insight-box">
-          <strong>1. High Employee Turnover Risk (66.7%)</strong>
+          <strong>1. EAP Access Alone Doesn't Reduce Turnover Intention</strong>
+          <div class="insight-details">
+            <p><strong>Insight:</strong> 71.88% of employees have access to an Employee Assistance Program, yet turnover intention remains high across both groups — 67.2% among employees with EAP access versus 65.4% among those without. The gap is marginal, suggesting that simply providing the program isn't enough to influence retention.</p>
+            <p><strong>Business Impact:</strong> The organization may be investing in a benefit that isn't translating into measurable outcomes. The issue likely lies in program awareness, utilization, or stigma around seeking support — not availability itself.</p>
+          </div>
+        </div>
+
+        <div class="insight-box">
+          <strong>2. High Employee Turnover Risk (66.7%)</strong>
           <div class="insight-details">
             <p><strong>Insight:</strong> A significant portion of employees may consider leaving the organization, suggesting potential challenges in employee retention.</p>
             <p><strong>Business Impact:</strong> High turnover can increase recruitment costs, onboarding expenses, and productivity loss.</p>
@@ -129,37 +146,38 @@
         </div>
 
         <div class="insight-box">
-          <strong>2. High Workplace Stress (7.3 / 10)</strong>
+          <strong>3. High Workplace Stress (7.3 / 10)</strong>
           <div class="insight-details">
             <p><strong>Insight:</strong> Stress levels remain relatively high across the workforce, indicating that workload and workplace conditions may negatively affect employee well-being.</p>
           </div>
         </div>
 
         <div class="insight-box">
-          <strong>3. Low Job Satisfaction (2.2 / 5)</strong>
+          <strong>4. Low Job Satisfaction (2.2 / 5)</strong>
           <div class="insight-details">
             <p><strong>Insight:</strong> Employees generally report low satisfaction, which may contribute to burnout and turnover intention.</p>
           </div>
         </div>
 
         <div class="insight-box">
-          <strong>4. Burnout Occurs Frequently</strong>
+          <strong>5. Burnout Occurs Frequently</strong>
           <div class="insight-details">
             <p><strong>Insight:</strong> The Burnout Frequency chart shows that many employees experience burnout occasionally or often, rather than never. Burnout is a widespread issue that requires proactive intervention.</p>
           </div>
         </div>
 
         <div class="insight-box">
-          <strong>5. Workplace Factors</strong>
+          <strong>6. Workplace Factors</strong>
           <div class="insight-details">
-            <p><strong>Insight:</strong> The dashboard highlights that factors such as heavy workload, emotional demands, career stagnation, and poor work environment are among the most influential contributors to employee stress.</p>
+            <p><strong>Insight:</strong> The dashboard highlights that factors such as heavy workload, emotional demands, career stagnation, and poor work environment — with Work-Life Imbalance being the most dominant — are among the most influential contributors to employee stress.</p>
           </div>
         </div>
 
         <h4>Business Recommendations</h4>
         <ul>
-          <li><strong>Employee Well-being Program:</strong> Expand Employee Assistance Programs (EAP) by providing mental health counseling, stress management workshops, and psychological support.</li>
+          <li><strong>Re-evaluate EAP Program Effectiveness:</strong> Since access alone shows no meaningful impact on turnover, investigate program utilization rates, employee awareness, and possible stigma barriers rather than expanding access further.</li>
           <li><strong>Workload Optimization:</strong> Review staffing levels and redistribute workloads in departments with consistently high stress levels.</li>
+          <li><strong>Work-Life Balance Initiatives:</strong> Address Work-Life Imbalance directly, as it is the single most reported workplace factor affecting employees.</li>
           <li><strong>Career Development:</strong> Develop clear career progression paths, mentoring programs, and internal training to reduce career stagnation.</li>
           <li><strong>Employee Engagement:</strong> Conduct regular employee satisfaction surveys and implement continuous feedback mechanisms to identify workplace issues early.</li>
           <li><strong>Department-Level Monitoring:</strong> Use dashboard filters to monitor departments with lower satisfaction scores and prioritize improvement initiatives for high-risk teams.</li>
