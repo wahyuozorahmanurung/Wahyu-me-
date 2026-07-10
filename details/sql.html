@@ -85,10 +85,10 @@
                 Building a relational database structure consisting of 9 interconnected operational entities using <em>Foreign Key</em> constraints with <em>ON DELETE CASCADE</em> and <em>ON UPDATE CASCADE</em> rules to guarantee referential integrity:
             </p>
             <ul>
-                <li><strong>Profile Entities:</strong> The <code>Karyawan</code> table as the central entity, supported by the <code>Jabatan</code> and <code>Departemen</code> tables to structure the organizational hierarchy.</li>
-                <li><strong>Operational & Attendance Entities:</strong> The <code>Absensi</code> table to track attendance and the <code>Lembur</code> table to calculate employee overtime hours.</li>
-                <li><strong>Financial Component Entities:</strong> The <code>Tunjangan</code>, <code>TunjanganKaryawan</code>, and <code>PotonganGaji</code> tables to store salary addition and deduction variables.</li>
-                <li><strong>Final Recapitulation Entity:</strong> The <code>Gaji</code> table which compiles the total net pay along with its regular payment dates.</li>
+                <li><strong>Profile Entities:</strong> The Karyawan table as the central entity, supported by the Jabatan and Departemen tables to structure the organizational hierarchy.</li>
+                <li><strong>Operational & Attendance Entities:</strong> The Absensi table to track attendance and the Lembur table to calculate employee overtime hours.</li>
+                <li><strong>Financial Component Entities:</strong> The Tunjangan, TunjanganKaryawan, and PotonganGaji tables to store salary addition and deduction variables.</li>
+                <li><strong>Final Recapitulation Entity:</strong> The Gaji table which compiles the total net pay along with its regular payment dates.</li>
             </ul>
 
             <h5>2. Business Logic Automation via Stored Procedures</h5>
@@ -96,8 +96,8 @@
                 To simplify application interaction with the database and maintain code modularity, I designed several advanced stored procedures with dynamic input parameters:
             </p>
             <ul>
-                <li><strong>Collective Data Insertion Procedure (<code>InsertDataLengkap</code>):</strong> Automates adding new data sequentially across multiple tables in a single command execution (Karyawan, Lembur, Potongan, Tunjangan, and initial Gaji).</li>
-                <li><strong>Centralized Update Procedure (<code>UpdateDataLengkap</code>):</strong> Provides a single secure gateway to update all employee financial parameters simultaneously across related relational tables, ensuring backend program code efficiency.</li>
+                <li><strong>Collective Data Insertion Procedure (InsertDataLengkap):</strong> Automates adding new data sequentially across multiple tables in a single command execution (Karyawan, Lembur, Potongan, Tunjangan, and initial Gaji).</li>
+                <li><strong>Centralized Update Procedure (UpdateDataLengkap):</strong> Provides a single secure gateway to update all employee financial parameters simultaneously across related relational tables, ensuring backend program code efficiency.</li>
             </ul>
 
             <h5>3. Securing Transactions via SQL Dump Configuration</h5>
