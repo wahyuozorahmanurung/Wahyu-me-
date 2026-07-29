@@ -264,69 +264,90 @@ nav {
 }
 
 .profile-frame {
-    width: 360px;
-    height: 460px;
     position: relative;
-    border-radius: 16px;
-    overflow: hidden; /* Memotong kilatan agar pas di ujung kotak */
-    background: #071121;
-    box-shadow: 0 0 30px rgba(100, 255, 218, 0.15); /* Bayangan neon halus di luar box */
-    transition: 0.4s ease;
+    width: 340px;
+    height: 420px;
+    border-radius: 20px;
+    padding: 3px;
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: 0 20px 50px -12px rgba(0,0,0,0.5);
+    transition: transform .4s cubic-bezier(0.25,1,0.5,1), box-shadow .4s ease;
 }
 
-
-.profile-frame:hover .profile-img {
-    transform: translate(-10px, -10px);
-    filter: none;
-}
-.border-glow {
+/* Lapisan cahaya yang berputar di pinggir bingkai */
+.profile-frame::before {
+    content: "";
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    /* Membuat gradien warna tajam seperti kilatan cahaya */
+    top: 50%;
+    left: 50%;
+    width: 250%;
+    height: 250%;
     background: conic-gradient(
-        transparent, 
-        transparent, 
-        transparent, 
-        var(--accent-color)
+        from 0deg,
+        transparent 0deg,
+        transparent 260deg,
+        var(--accent-color) 300deg,
+        rgba(100,255,218,0.4) 320deg,
+        transparent 360deg
     );
+    transform: translate(-50%, -50%);
+    animation: border-light-spin 4s linear infinite;
     z-index: 1;
-    animation: lightning-spin 4s linear infinite; /* Animasi berputar */
 }
-@keyframes lightning-spin {
+
+/* Sedikit glow tipis mengikuti bentuk frame, di atas cahaya berputar */
+.profile-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    box-shadow: inset 0 0 0 1px rgba(100,255,218,0.15);
+    pointer-events: none;
+    z-index: 3;
+}
+
+@keyframes border-light-spin {
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
 .profile-img {
-    position: absolute;
-    inset: 4px;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    object-fit: cover; 
-    object-position: center center;
-    border-radius: 12px;
+    position: relative;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    margin: 3px;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 17px;
     background: var(--card-bg);
+    filter: contrast(1.05) brightness(0.98);
+    image-rendering: -webkit-optimize-contrast;
+    transition: filter .4s ease;
+    display: block;
     z-index: 2;
-    filter: brightness(0.9) contrast(1.15) saturate(0.95);
-    mix-blend-mode: normal;
-    transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .profile-frame:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 0 50px rgba(100, 255, 218, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 28px 60px -10px rgba(100, 255, 218, 0.25);
 }
 
 .profile-frame:hover .profile-img {
-    filter: brightness(1.05) contrast(1.2);
+    filter: contrast(1.1) brightness(1.02);
 }
 
-.profile-frame:hover .border-glow {
-    animation-duration: 1.5s;
+.profile-frame:hover::before {
+    animation-duration: 2s;
+}
+
+
+@media (max-width: 992px) {
+    .profile-frame {
+        width: 280px;
+        height: 340px;
+    }
 }
 /* ================= PROJECT CARDS ================= */
 
